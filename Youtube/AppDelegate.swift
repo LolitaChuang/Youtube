@@ -16,7 +16,7 @@ import UIKit
  4. 在terminal 執行 
     xcrun git config --global user.email you@yourdomain.com
     xcrun git config --global user.name "Your Name Here"
-    讓Xcode相信你然後開啟helper function, Git
+     讓Xcode相信你然後開啟helper function, Git? 還是因為要登入GitHub? 
 */
 
 
