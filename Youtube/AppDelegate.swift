@@ -8,6 +8,18 @@
 
 import UIKit
 
+/*
+ GitHub Repositary :
+ 1. 在GitHub新增一個repositary
+ 2. Xcode -> Source Conrol -> Create Working Copy
+ 3. Configure 加入Remote repositary information
+ 4. 在terminal 執行 
+    xcrun git config --global user.email you@yourdomain.com
+    xcrun git config --global user.name "Your Name Here"
+    讓Xcode相信你然後開啟helper function, Git
+*/
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
