@@ -18,6 +18,8 @@ class HomeViewController: UICollectionViewController {
         return view
     } ()
     
+    let videoStateController = VideoStateController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +44,14 @@ class HomeViewController: UICollectionViewController {
         self.navigationItem.titleView = titleLabel
         
         setupMenuBar()
+        
+        // prepare to populate talble of videos
+        videoStateController.fetchVideos() {(startIndex:Int, endIndex:Int, isReloadNeeded:Bool) -> Void in
+            DispatchQueue.main.async(execute: {
+                self.collectionView?.reloadData()
+                //self.collectionView?.reloadItems(at: <#T##[IndexPath]#>)
+            })
+        }
     }
     
     

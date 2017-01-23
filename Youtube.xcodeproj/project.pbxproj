@@ -17,8 +17,8 @@
 		D366D51C1E2F6D520016DBBB /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D51B1E2F6D510016DBBB /* MenuBar.swift */; };
 		D366D51E1E2F78870016DBBB /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D51D1E2F78870016DBBB /* MenuBarCell.swift */; };
 		D366D5201E2F7F180016DBBB /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D51F1E2F7F180016DBBB /* BaseCell.swift */; };
-		D366D52C1E365C840016DBBB /* VideoStateControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D52B1E365C840016DBBB /* VideoStateControllerViewController.swift */; };
 		D366D52E1E365D620016DBBB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D52D1E365D620016DBBB /* Video.swift */; };
+		D366D5311E36842D0016DBBB /* VideoStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5301E36842D0016DBBB /* VideoStateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +34,8 @@
 		D366D51B1E2F6D510016DBBB /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		D366D51D1E2F78870016DBBB /* MenuBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarCell.swift; sourceTree = "<group>"; };
 		D366D51F1E2F7F180016DBBB /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
-		D366D52B1E365C840016DBBB /* VideoStateControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStateControllerViewController.swift; sourceTree = "<group>"; };
 		D366D52D1E365D620016DBBB /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D366D5301E36842D0016DBBB /* VideoStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D366D5031E2CD7670016DBBB /* HomeViewController.swift */,
-				D366D52B1E365C840016DBBB /* VideoStateControllerViewController.swift */,
+				D366D5301E36842D0016DBBB /* VideoStateController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -203,9 +203,9 @@
 				D366D51E1E2F78870016DBBB /* MenuBarCell.swift in Sources */,
 				D366D5021E2CD7670016DBBB /* AppDelegate.swift in Sources */,
 				D366D52E1E365D620016DBBB /* Video.swift in Sources */,
+				D366D5311E36842D0016DBBB /* VideoStateController.swift in Sources */,
 				D366D5201E2F7F180016DBBB /* BaseCell.swift in Sources */,
 				D366D5141E2E68C60016DBBB /* Utility.swift in Sources */,
-				D366D52C1E365C840016DBBB /* VideoStateControllerViewController.swift in Sources */,
 				D366D51C1E2F6D520016DBBB /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
