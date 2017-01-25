@@ -20,7 +20,9 @@ class SynchronizedArray<T> {
         }
     }
     
-    // protocol
+    // Apple's definition : Classes, structures, and enumerations can define subscripts, which are shortcuts for accessing the member elements of a collection, list, or sequence
+    // 像是operator ovarloading : subscripts let you override the language-level square brackets [] usually used for accessing elements of a collection
+    // Subscript definitions mix both function and computed property definition syntax
     subscript(index: Int) -> T? {
         get {
             var element:T?
@@ -33,11 +35,13 @@ class SynchronizedArray<T> {
             return element
         }
         
-        set {
+        //  There’s a default parameter newValue with a type that equals the subscript’s return type.
+        set (newValue) {
             queue.async(flags:.barrier) { [weak self] in
-                if let weakSelf = self, var unwrappedArray = weakSelf.array {
+                if let weakSelf = self, let unwrappedNewValue = newValue, var unwrappedArray = weakSelf.array {
                     
-                    // unwrappedArray[index] = newValue
+                     //unwrappedArray[index] = newValue // 因為subscript 傳入參數的型別和return type一樣
+                    unwrappedArray[index] = unwrappedNewValue
                 }
             }
         }
