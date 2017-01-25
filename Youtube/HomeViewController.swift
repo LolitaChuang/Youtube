@@ -70,13 +70,16 @@ extension HomeViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return videoStateController.videos.count()
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! VideoCell
         
         //cell.backgroundColor = UIColor.red
+        let video = videoStateController.videos[indexPath.item]!
+        
+        cell.video = video
         return cell
     }
 }
@@ -88,7 +91,7 @@ extension HomeViewController:UICollectionViewDelegateFlowLayout {
         let width = collectionView.bounds.width - 16 * 2
         let height = width * 9 / 16
         
-        return CGSize(width: collectionView.bounds.width, height: height + 16 + 68) // 這個設定和VideoCell分開了?
+        return CGSize(width: collectionView.bounds.width, height: height + 16 + 90) // 這個設定和VideoCell分開了?
      }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

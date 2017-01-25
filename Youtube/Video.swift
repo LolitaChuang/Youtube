@@ -9,6 +9,7 @@
 import UIKit
 
 class Video:NSObject {
+    // 最好保留個欄位的原型, 再由View決定如何呈現
     var thumbnailImageUrl:String?
     var title:String?
     var numberOfViews:String?
@@ -27,7 +28,11 @@ class Video:NSObject {
             // thumbnailImageUrl = video!["thumbnailImageUrl"]? as! String => 以as? 做conditional downcast
             thumbnailImageUrl = unwrappedVideo["thumbnail_image_name"] as? String ?? "default url"
             title = unwrappedVideo["title"] as? String ?? "default title"
-            numberOfViews = unwrappedVideo["numberOfViews"] as? String ?? "0"
+            
+            let number = unwrappedVideo["number_of_views"] as? Int ?? 0
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            numberOfViews = numberFormatter.string(for: number)
             
             let dateFormatter = DateFormatter()
             DateFormatter.dateFormat(fromTemplate: "EEE, dd MMM yyyy hh:mm:ss +zzzz", options: 0, locale: nil)
