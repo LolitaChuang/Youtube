@@ -27,6 +27,34 @@ class VideoCell:BaseCell {
      }()
      */
     
+    var video:Video? {
+        didSet {
+            titleLabel.text = video!.title!
+            //thumbnailImageView
+            //userProfileImageView
+            
+            //subTitleTextView.text = "\(video?.channel?.name?) . \(video?.numberOfViews?) . \(video?.uploadDate?)" => 結束位置不需加?
+            if let name = video?.channel?.name, let numberOfViews = video?.numberOfViews, let date = video?.uploadDate {
+                subTitleTextView.text = "\(name) . \(numberOfViews) . \(date)"
+            }
+            
+            // measure title text
+            if let title = video?.title {
+                let size = CGSize(width:frame.width - 16 - 44 - 8 - 16, height:CGFloat(MAXFLOAT))
+                let options = NSStringDrawingOptions.usesFontLeading.union(NSStringDrawingOptions.usesLineFragmentOrigin)
+                
+                let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 14)], context: nil)
+                
+                if estimatedRect.size.height > 20 {
+                    titleLabelLayoutConstraint?.constant = 44
+                } else {
+                    titleLabelLayoutConstraint?.constant = 20
+                }
+            }
+            
+        }
+    }
+    
     var checkTheWidth:CGFloat {
         get {
             return self.bounds.width // getter中可以access 'self'
@@ -66,12 +94,14 @@ class VideoCell:BaseCell {
         return imageView
     }()
     
+    var titleLabelLayoutConstraint:NSLayoutConstraint?
+    
     let titleLabel : UILabel = {
         let label = UILabel()
         //label.backgroundColor = UIColor.purple
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        label.text = "Taylor Swift - Blank Space"
+        label.numberOfLines = 2
+        //label.text = "Taylor Swift - Blank Space"
         
         return label
     }()
@@ -81,7 +111,7 @@ class VideoCell:BaseCell {
         //textView.backgroundColor = UIColor.red
         textView.translatesAutoresizingMaskIntoConstraints = false
         
-        textView.text = "TaylorSwiftVEVO • 1,604,684,607 views • 2 years ago"
+        //textView.text = "TaylorSwiftVEVO • 1,604,684,607 views • 2 years ago"
         textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0) // textView有預設的inset;調整讓他和label齊頭
         textView.textColor = UIColor.lightGray
         
@@ -139,7 +169,7 @@ class VideoCell:BaseCell {
         addConstraintsWithFormat(format: "H:|[v0]|", views: separatorView)
         
         // vertical
-        addConstraintsWithFormat(format:"V:|-16-[v0]-8-[v1(44)]-16-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
+        addConstraintsWithFormat(format:"V:|-16-[v0]-8-[v1(44)]-36-[v2(1)]|", views: thumbnailImageView, userProfileImageView, separatorView)
         
         
         // 另一種contraint形式
@@ -150,7 +180,8 @@ class VideoCell:BaseCell {
         // right constraint
         addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .right, relatedBy: .equal, toItem: thumbnailImageView, attribute: .right, multiplier: 1, constant: 0))
         // height constraing
-        addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20))
+        titleLabelLayoutConstraint = NSLayoutConstraint(item: titleLabel, attribute: .height, relatedBy: .equal, toItem: self, attribute: .height, multiplier: 0, constant: 20)
+        addConstraint(titleLabelLayoutConstraint!)
         
         
         // top constraint
