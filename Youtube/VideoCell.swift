@@ -30,8 +30,9 @@ class VideoCell:BaseCell {
     var video:Video? {
         didSet {
             titleLabel.text = video!.title!
-            //thumbnailImageView
-            //userProfileImageView
+            
+            thumbnailImageView.loadImage(from: URL(string:video!.thumbnailImageUrl!)!)
+            userProfileImageView.loadImage(from: URL(string:video!.channel!.profileImageUrl!)!)
             
             //subTitleTextView.text = "\(video?.channel?.name?) . \(video?.numberOfViews?) . \(video?.uploadDate?)" => 結束位置不需加?
             if let name = video?.channel?.name, let numberOfViews = video?.numberOfViews, let date = video?.uploadDate {
@@ -45,6 +46,7 @@ class VideoCell:BaseCell {
                 
                 let estimatedRect = NSString(string: title).boundingRect(with: size, options: options, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 14)], context: nil)
                 
+                //print("height : \(estimatedRect.size.height)")
                 if estimatedRect.size.height > 20 {
                     titleLabelLayoutConstraint?.constant = 44
                 } else {
@@ -63,10 +65,11 @@ class VideoCell:BaseCell {
     
     let thumbnailImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
+        //imageView.backgroundColor = UIColor.blue
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
-        imageView.image = UIImage(named: "thumbnail")
+        // 可以改成已知size的default image?
+        //imageView.image = UIImage(named: "thumbnail")
         imageView.contentMode = UIViewContentMode.scaleAspectFill
         imageView.clipsToBounds = true // content and subviews are clipped to the bounds of the view : subview如image會被superview, imageView bound住切掉
         
@@ -86,8 +89,9 @@ class VideoCell:BaseCell {
         let imageView = UIImageView()
         imageView.backgroundColor = UIColor.green
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
         
-        imageView.image = UIImage(named: "profile")
+        //imageView.image = UIImage(named: "profile")
         imageView.layer.cornerRadius = 22.0
         imageView.layer.masksToBounds = true // sublayers are clipped to the layer's bound 被layer的corner bound住切掉
         
