@@ -6,7 +6,8 @@
 //  Copyright © 2017年 Child Woman. All rights reserved.
 //
 
-import UIKit
+//import UIKit
+import Foundation
 
 class Video:NSObject {
     // 最好保留個欄位的原型, 再由View決定如何呈現
