@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D339E5431E536EB0006B088F /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339E5421E536EB0006B088F /* ScrollViewController.swift */; };
 		D366D5021E2CD7670016DBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5011E2CD7670016DBBB /* AppDelegate.swift */; };
 		D366D5041E2CD7670016DBBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5031E2CD7670016DBBB /* HomeViewController.swift */; };
 		D366D5071E2CD7670016DBBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D366D5051E2CD7670016DBBB /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D339E5421E536EB0006B088F /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		D366D4FE1E2CD7670016DBBB /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366D5011E2CD7670016DBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D366D5031E2CD7670016DBBB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D366D5031E2CD7670016DBBB /* HomeViewController.swift */,
+				D339E5421E536EB0006B088F /* ScrollViewController.swift */,
 				D366D5301E36842D0016DBBB /* VideoStateController.swift */,
 			);
 			name = Controller;
@@ -208,6 +211,7 @@
 				D366D52E1E365D620016DBBB /* Video.swift in Sources */,
 				D366D5331E37C5020016DBBB /* SynchronizedArray.swift in Sources */,
 				D366D5311E36842D0016DBBB /* VideoStateController.swift in Sources */,
+				D339E5431E536EB0006B088F /* ScrollViewController.swift in Sources */,
 				D366D5201E2F7F180016DBBB /* BaseCell.swift in Sources */,
 				D366D5141E2E68C60016DBBB /* Utility.swift in Sources */,
 				D366D51C1E2F6D520016DBBB /* MenuBar.swift in Sources */,
