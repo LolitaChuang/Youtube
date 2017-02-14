@@ -32,7 +32,8 @@ class HomeViewController: UICollectionViewController {
         collectionView?.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
-        self.navigationItem.title = "Home"
+        //self.navigationItem.title = "Home"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "More", style: .plain, target: self, action:#selector(HomeViewController.moreRightButtonPressed(_:)))
         self.navigationController?.navigationBar.isTranslucent = false // 不透明? 會是黑色?
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
@@ -74,6 +75,12 @@ class HomeViewController: UICollectionViewController {
 
         // These methods return an inactive constraint of the form thisAnchor = otherAnchor + constant.
         menuBar.topAnchor.constraint(equalTo: topLayoutGuide.bottomAnchor).isActive = true
+    }
+    
+    func moreRightButtonPressed(_ sender:UIButton) {
+        //print("pressed")
+        let destinationViewController = ScrollViewController()
+        self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
 
 }
