@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuBar : UIView {
-    let imageNames = ["home", "trending", "subscriptions", "account", "profile"]
+    let imageNames = ["home", "trending", "subscriptions", "account"/*, "profile"*/]
     
     // lazy let collectionView : UICollectionView = { // lazy需要搭配var
     lazy var collectionView : UICollectionView = {
