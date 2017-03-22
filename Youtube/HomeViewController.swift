@@ -20,6 +20,23 @@ class HomeViewController: UICollectionViewController {
     
     let videoStateController = VideoStateController()
     
+    /*
+    public init(collectionViewLayout layout: UICollectionViewLayout)
+    public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    public init?(coder aDecoder: NSCoder)
+    */
+    
+    /* 為什麼會造成和 init(collectionViewLayout layout: UICollectionViewLayout)的衝突, compiler error?
+       不用加override, 因為required implies override
+     */
+    /*
+    required init?(coder aDecoder: NSCoder) { //  如何知道他是required ?
+        print("init?(coder aDecoder: NSCoder) shouldn't be called ???")
+        super.init(coder: aDecoder)
+    }
+    */
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,7 +50,7 @@ class HomeViewController: UICollectionViewController {
         collectionView?.scrollIndicatorInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         
         //self.navigationItem.title = "Home"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "More", style: .plain, target: self, action:#selector(HomeViewController.moreRightButtonPressed(_:)))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "More", style: .plain, target: self, action:#selector(HomeViewController.moreRightButtonPressed(_:)))
         self.navigationController?.navigationBar.isTranslucent = false // 不透明? 會是黑色?
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))

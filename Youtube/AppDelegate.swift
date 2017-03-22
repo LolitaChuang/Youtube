@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let layout = UICollectionViewFlowLayout()
         window?.rootViewController = UINavigationController(rootViewController: HomeViewController(collectionViewLayout: layout))
+        //window?.rootViewController = UINavigationController(rootViewController: HomeViewController())
         
         // navigation bar setting
         UINavigationBar.appearance().barTintColor = UIColor.rgb(red:230, green:32, blue:31)
