@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // navigation bar setting
         UINavigationBar.appearance().barTintColor = UIColor.rgb(red:230, green:32, blue:31)
-        UINavigationBar.appearance().tintColor = UIColor.white // 上面的字的顏色
+        UINavigationBar.appearance().tintColor = UIColor.blue // 上面的字的顏色
         
         // navigation bar下方有陰影, 所以將之移除
         UINavigationBar.appearance().shadowImage = UIImage()
