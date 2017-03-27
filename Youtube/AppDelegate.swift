@@ -19,6 +19,9 @@ import UIKit
      讓Xcode相信你然後開啟helper function, Git? 還是因為要登入GitHub? 
 */
 
+/*
+ 1. 0326 version1
+ */
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
