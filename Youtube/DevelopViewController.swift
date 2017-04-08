@@ -13,6 +13,7 @@ class DevelopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("develop branch for Git test")
+        print("develop branch : commit 1")
     }
 
     override func didReceiveMemoryWarning() {
