@@ -21,6 +21,7 @@
 		D366D52E1E365D620016DBBB /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D52D1E365D620016DBBB /* Video.swift */; };
 		D366D5311E36842D0016DBBB /* VideoStateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5301E36842D0016DBBB /* VideoStateController.swift */; };
 		D366D5331E37C5020016DBBB /* SynchronizedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5321E37C5020016DBBB /* SynchronizedArray.swift */; };
+		D385534E1E98BA230024DAAA /* DevelopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D385534D1E98BA230024DAAA /* DevelopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D366D52D1E365D620016DBBB /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D366D5301E36842D0016DBBB /* VideoStateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoStateController.swift; sourceTree = "<group>"; };
 		D366D5321E37C5020016DBBB /* SynchronizedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynchronizedArray.swift; sourceTree = "<group>"; };
+		D385534D1E98BA230024DAAA /* DevelopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevelopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		D366D5001E2CD7670016DBBB /* Youtube */ = {
 			isa = PBXGroup;
 			children = (
+				D385534D1E98BA230024DAAA /* DevelopViewController.swift */,
 				D366D5321E37C5020016DBBB /* SynchronizedArray.swift */,
 				D366D5051E2CD7670016DBBB /* Main.storyboard */,
 				D366D5011E2CD7670016DBBB /* AppDelegate.swift */,
@@ -208,6 +211,7 @@
 				D366D5161E2E75760016DBBB /* VideoCell.swift in Sources */,
 				D366D51E1E2F78870016DBBB /* MenuBarCell.swift in Sources */,
 				D366D5021E2CD7670016DBBB /* AppDelegate.swift in Sources */,
+				D385534E1E98BA230024DAAA /* DevelopViewController.swift in Sources */,
 				D366D52E1E365D620016DBBB /* Video.swift in Sources */,
 				D366D5331E37C5020016DBBB /* SynchronizedArray.swift in Sources */,
 				D366D5311E36842D0016DBBB /* VideoStateController.swift in Sources */,
