@@ -13,6 +13,7 @@ class FeatureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("feature_1 branch : commit 1")
+        print("feature_1 branch : commit 2")
     }
 
     override func didReceiveMemoryWarning() {
