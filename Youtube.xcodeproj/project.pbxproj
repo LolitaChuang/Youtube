@@ -77,11 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				D38553541E9BC8DE0024DAAA /* SynchronizedArray.swift */,
-				D38553511E9BC7D00024DAAA /* Feature Branch */,
 				D385534D1E98BA230024DAAA /* DevelopViewController.swift */,
 				D366D5051E2CD7670016DBBB /* Main.storyboard */,
 				D366D5011E2CD7670016DBBB /* AppDelegate.swift */,
-				D366D5181E2E75900016DBBB /* Helper */,
+				D38553511E9BC7D00024DAAA /* Feature Branch */,
+				D366D5181E2E75900016DBBB /* Utilities */,
 				D366D52F1E365D790016DBBB /* Model */,
 				D366D5191E2E759D0016DBBB /* Controller */,
 				D366D5171E2E75840016DBBB /* View */,
@@ -101,12 +101,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		D366D5181E2E75900016DBBB /* Helper */ = {
+		D366D5181E2E75900016DBBB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				D366D5131E2E68C60016DBBB /* Utility.swift */,
 			);
-			name = Helper;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		D366D5191E2E759D0016DBBB /* Controller */ = {
