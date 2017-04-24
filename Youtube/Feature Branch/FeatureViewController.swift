@@ -24,6 +24,7 @@ class FeatureViewController: UIViewController {
         print("feature_1 branch : commit 3")
         
         print("testDir2 branch : commit 11:48")
+        print("testDir2 branch : commit 11:50")
     }
 
     override func didReceiveMemoryWarning() {
