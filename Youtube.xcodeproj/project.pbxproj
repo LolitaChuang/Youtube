@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EEDBBE32A2E991CAFDE8CD7 /* libPods-Youtube.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1ED04C25C34BB1933F5549 /* libPods-Youtube.a */; };
 		D339E5431E536EB0006B088F /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D339E5421E536EB0006B088F /* ScrollViewController.swift */; };
 		D366D5021E2CD7670016DBBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5011E2CD7670016DBBB /* AppDelegate.swift */; };
 		D366D5041E2CD7670016DBBB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D366D5031E2CD7670016DBBB /* HomeViewController.swift */; };
@@ -26,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AD8A59948BA9D597B4550A5 /* Pods-Youtube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.debug.xcconfig"; sourceTree = "<group>"; };
+		1C1ED04C25C34BB1933F5549 /* libPods-Youtube.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Youtube.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B218DCCED26D8340A6CEF7A9 /* Pods-Youtube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Youtube.release.xcconfig"; path = "Pods/Target Support Files/Pods-Youtube/Pods-Youtube.release.xcconfig"; sourceTree = "<group>"; };
 		D339E5421E536EB0006B088F /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		D366D4FE1E2CD7670016DBBB /* Youtube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Youtube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D366D5011E2CD7670016DBBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EEDBBE32A2E991CAFDE8CD7 /* libPods-Youtube.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01AEC2080460F74937864593 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1ED04C25C34BB1933F5549 /* libPods-Youtube.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3526D1FADA51022D2723AB81 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AD8A59948BA9D597B4550A5 /* Pods-Youtube.debug.xcconfig */,
+				B218DCCED26D8340A6CEF7A9 /* Pods-Youtube.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D366D4F51E2CD7660016DBBB = {
 			isa = PBXGroup;
 			children = (
 				D366D5001E2CD7670016DBBB /* Youtube */,
 				D366D4FF1E2CD7670016DBBB /* Products */,
+				3526D1FADA51022D2723AB81 /* Pods */,
+				01AEC2080460F74937864593 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D366D5101E2CD7670016DBBB /* Build configuration list for PBXNativeTarget "Youtube" */;
 			buildPhases = (
+				DFC271871240D551F0E4C5BE /* [CP] Check Pods Manifest.lock */,
 				D366D4FA1E2CD7670016DBBB /* Sources */,
 				D366D4FB1E2CD7670016DBBB /* Frameworks */,
 				D366D4FC1E2CD7670016DBBB /* Resources */,
+				B4169E062ED082D58B0B6A36 /* [CP] Embed Pods Frameworks */,
+				3CB9E3EB200DEF15658571BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +239,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3CB9E3EB200DEF15658571BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4169E062ED082D58B0B6A36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Youtube/Pods-Youtube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC271871240D551F0E4C5BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D366D4FA1E2CD7670016DBBB /* Sources */ = {
@@ -354,6 +429,7 @@
 		};
 		D366D5111E2CD7670016DBBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AD8A59948BA9D597B4550A5 /* Pods-Youtube.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MNHQDYM469;
@@ -367,6 +443,7 @@
 		};
 		D366D5121E2CD7670016DBBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B218DCCED26D8340A6CEF7A9 /* Pods-Youtube.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = MNHQDYM469;
