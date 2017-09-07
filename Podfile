@@ -2,4 +2,4 @@
 platform :ios, '8.0'
 
 target 'Youtube'
-pod 'AFNetworking', '~> 1.0'
+pod 'AFNetworking', '~> 2.0’
