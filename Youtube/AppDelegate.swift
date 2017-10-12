@@ -56,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.statusBarStyle = .lightContent
         // status bar setting
         let statusBarBackgroundView = UIView()
-        statusBarBackgroundView.backgroundColor = UIColor.rgb(red:194, green: 31, blue: 31)
+        statusBarBackgroundView.backgroundColor = UIColor.rgb(red:190, green: 31, blue: 31)
         statusBarBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         
         window?.addSubview(statusBarBackgroundView)
